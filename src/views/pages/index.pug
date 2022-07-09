@@ -1,0 +1,159 @@
+extends ../layout/default
+
+block vars
+    - pageClass = 'home'
+    - headTitle = 'Главная'
+block content
+    .slide.slide-banner#slide-0
+        .container
+            .slide-banner__wrapper
+                h1.slide-banner__title Научно-исследовательский проектный институт
+                div.slide-banner__mouse
+                    img(src=require('@images/mouse.gif'))
+    .slide.slide-service#slide-1
+        .container.slide-service__container
+            .slide-service__center
+                div
+                    .slide-service__wrapper
+                        div
+                            h2.slide-service__title Услуги института
+                        .slide-service__works
+                            .slide-service__work
+                                .slide-service__numbering
+                                    p.slide-service__list 1
+                                    p.slide-service__name НИОКР
+                                p.slide-service__text Выполнение НИОКР в области разработки составов тампонажных растворов и сухих смесей
+                            .slide-service__work
+                                .slide-service__numbering
+                                    p.slide-service__list 2
+                                    p.slide-service__name Сертификация
+                                p.slide-service__text Проведение независимых сертификационных испытаний
+                            .slide-service__work
+                                .slide-service__numbering
+                                    p.slide-service__list 3
+                                    p.slide-service__name Надзор и сопровождение
+                                p.slide-service__text Авторский и супервайзинговый надзор, научно-техническое сопровождение работ по цементированию обсадных колонн скважин
+                            .slide-service__work
+                                .slide-service__numbering
+                                    p.slide-service__list 4
+                                    p.slide-service__name Проектирование
+                                p.slide-service__text Проектирование технологического оборудования по получению минеральных добавок к цементным смесям
+                            .slide-service__work
+                                .slide-service__numbering
+                                    p.slide-service__list 5
+                                    p.slide-service__name Экспертиза
+                                p.slide-service__text Расследование инцидентов, аварий и брака при строительстве скважин
+                    img.slide-service__img(src=require('@images/services.png'))
+    .slide.slide-about#slide-2
+        .container
+            .slide-about__center
+                div
+                    .slide-about__wrapper
+                        .slide-about__institute
+                            h2.slide-about__title
+                                span Урал
+                                span НИПИнефть
+                            button.btn.btn--primary об институте
+                        .slide-about__directions
+                            p.slide-about__text Организация, осуществляющая научно-исследовательскую, проектную и надзорную деятельность по следующим направлениям:
+                            ul.slide-about__list
+                                li
+                                    span Разработка технологий получения минеральных добавок к тампонажным смесям и растворам;
+                                li
+                                    span Разработка составов сухих тампонажных смесей для различных термобаричесх и горно-геологических условий (АВПД, АНПД, ММП, наличие коррозионно активных сред и т.д.);
+                                li
+                                    span Экспертная работа в области крепления скважин;
+                                li
+                                    span Авторский и супервайзинговый надзор, научно-техническое сопровождение работ по цементированию обсадных колонн скважин;
+                                li
+                                    span Проведение сертификационных и проверочных испытаний.
+                    .slide-about__companies
+                        div
+                            a(href="/").slide-about__logo
+                                +icon("logo")
+                        div
+                            p.slide-about__partners «УралНИПИнефть» входит в Группу компаний «Гранула-СпецЦемент»
+                            button.btn.btn--orange Подробнее
+    .slide.slide-groups#slide-3
+        .container
+            .slide-groups__wrapper
+                .slide-groups__circle.slide-groups__circle--orange
+                    .slide-groups__circle-wrapper
+                        h2.slide-groups__title 03
+                        p.slide-groups__text Три аккредитованных испытательных лабораторий цементных растворов
+                        img(src=require('../../public/images/group-1.png')).slide-groups__img
+                .slide-groups__circle.slide-groups__circle--gray
+                    .slide-groups__circle-wrapper
+                        h2.slide-groups__title 02
+                        p.slide-groups__text Два инжиниринговых центра в г. Екатеринбург и г. Асбест
+                        img(src=require('../../public/images/group-2.gif')).slide-groups__img
+                .slide-groups__circle.slide-groups__circle--white
+                    .slide-groups__circle-wrapper
+                        h2.slide-groups__title Группа+
+                        p.slide-groups__text Группа сопровождения проектов по строительству скважин в г. Сургут
+                        img(src=require('../../public/images/group-3.gif')).slide-groups__img
+    .slide.slide-benefits#slide-4
+        .container
+            .slide-benefits__center
+                .slide-benefits__wrapper
+                    .slide-benefits__list
+                        .slide-benefits__top
+                            h2.slide-benefits__title 15
+                            p.slide-benefits__years
+                                +icon("years")
+                        p.slide-benefits__text «УралНИПИнефть» более 15 лет на рынке нефтесервисных услуг
+                    .slide-benefits__list
+                        .slide-benefits__top
+                            h2.slide-benefits__title +50
+                            p.slide-benefits__conclusion
+                                +icon("conclusion")
+                        p.slide-benefits__text С 2018 года подготовлено более 50-ти экспертных заключений по расследованию инцидентов, аварий и брака при строительстве скважин
+                    .slide-benefits__list
+                        .slide-benefits__top
+                            h2.slide-benefits__title 3000
+                            p.slide-benefits__work
+                                +icon("work")
+                        p.slide-benefits__text Под надзором инженерной службы выполнено более 3000 работ по цементированию обсадных колонн скважин
+                    .slide-benefits__list
+                        .slide-benefits__top
+                            h2.slide-benefits__title 45
+                            p.slide-benefits__development
+                                +icon("development")
+                        p.slide-benefits__text Разработок, защищенных авторским правом
+                    .slide-benefits__list
+                        .slide-benefits__top
+                            h2.slide-benefits__title +150
+                            p.slide-benefits__mark
+                                +icon("mark")
+                        p.slide-benefits__text Разработано более 150 марок сухих тампонажных смесей
+                    .slide-benefits__list
+                        .slide-benefits__top.slide-benefits__top--mb28
+                            p.slide-benefits__documentation-icon
+                                +icon("documentation")
+                            h2.slide-benefits__documentation Разработана проектная документация
+                        p.slide-benefits__text По обогащению и получению минеральных добавок: алюмосикатных микросфер, расширяющих добавок, водо- и нефтенабухающих полимеров, растворимых элементов технологической оснастки
+    .slide.slide-contact#slide-5
+        .slide-contact__content
+            .slide-contact__wrapper
+                .container.slide-contact__container
+                    h2.slide-contact__title Контакты
+                    .slide-contact__contacts
+                        a(href="tel:+73432873693").slide-contact__phone +7 (343) 287 36 93
+                        p.slide-contact__address
+                            +icon("address")
+                            | 620100, Екатеринбург, Сибирский тракт, дом 12, строение 4, помещение 8
+                        a(href="mailto:info@uralnipineft.ru").slide-contact__mail
+                            +icon("mail")
+                            | info@uralnipineft.ru
+                iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab8de69a8fcc39a4bfb4a0bd9555faf373c04ce9e5f6f373232dd330a65990d06&amp;source=constructor" width="100%" height="400" frameborder="0").slide-contact__map
+        .footer
+            .container
+                .slide-contact__wrapper
+                    .footer__wrapper
+                        .footer__politics
+                            p.footer__text © 2022 «УралНИПИнефть»
+                            a(href="#").footer__policity Политика конфиденциальности
+                        .slide-contact__cult
+                            a(href="/").footer__cult
+                                | Сделано в
+                                +icon("cult")

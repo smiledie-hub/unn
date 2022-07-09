@@ -1,0 +1,9 @@
+* {
+  font-family: $font;
+}
+
+html, body {
+  @media (min-width: 1200px) {
+    overflow: hidden;
+  }
+}

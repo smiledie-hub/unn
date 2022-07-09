@@ -1,0 +1,100 @@
+.slide-benefits {
+  background-color: #EE7326;
+  background-image: url("@images/benefits.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 66px;
+
+    @include media-down(xl){
+      transform: scale(0.8);
+    }
+
+    @include media-down(lg) {
+      transform: none
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 130px 90px;
+
+    @include media-down(lg) {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    @include media-down(md){
+      grid-template-columns: 1fr;
+    }
+
+    @include media-down(xl) {
+      padding-top: 100px;
+      transform: scale(0.8);
+    }
+
+    @include media-down(lg) {
+      transform: scale(1);
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    &--mb28 {
+      margin-bottom: 28px;
+    }
+
+    @include media-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 114%;
+    color: #131313;
+  }
+
+  &__documentation {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 123%;
+    color: #131313;
+
+    @include media-down(md) {
+      font-size: 22px;
+      position: relative;
+      top: -8px;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 136%;
+    color: #FFFFFF;
+
+    @include media-down(xl){
+      font-size: 18px;
+      line-height: 139%;
+    }
+
+    @include media-down(md) {
+      font-size: 14px;
+      line-height: 157%;
+    }
+  }
+}

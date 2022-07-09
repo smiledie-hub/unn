@@ -1,0 +1,14 @@
+.slide {
+  height: 100vh;
+  max-height: 100vh;
+  padding-top: 100px;
+
+  @include media-down(lg){
+    height: auto;
+    max-height: none;
+  }
+
+  @include media-down(md){
+    padding-top: 65px;
+  }
+}

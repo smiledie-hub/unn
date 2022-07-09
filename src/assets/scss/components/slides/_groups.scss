@@ -1,0 +1,193 @@
+.slide-groups {
+  $root: &;
+  background-color: #131313;
+
+  @include media-down(lg) {
+    padding-top: 0;
+  }
+
+  @include media-down(md){
+    overflow-x: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include media-down(xl) {
+      transform: scale(0.8);
+    }
+
+    @include media-down(lg) {
+      transform: none;
+      min-height: 664px;
+    }
+
+    @include media-down(md){
+      width: 830px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 136px;
+    line-height: 100%;
+    color: #131313;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    transition: 300ms;
+
+    @include media-down(xl) {
+      font-size: 109px;
+      line-height: 103%;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 136%;
+    text-align: center;
+    color: #131313;
+    max-width: 350px;
+    position: relative;
+    z-index: 2;
+    transition: 300ms;
+
+    @include media-down(xl) {
+      font-size: 18px;
+      line-height: 139%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    min-width: 600px;
+    height: 600px;
+    min-height: 600px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 600px;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    transition: 300ms;
+    opacity: 0;
+    visibility: hidden;
+
+    @include media-down(xl) {
+      width: 450px;
+      min-width: 450px;
+      height: 450px;
+      min-height: 450px;
+    }
+
+    @include media-down(lg) {
+      width: 400px;
+      min-width: 400px;
+      height: 400px;
+      min-height: 400px;
+    }
+  }
+
+  &__circle {
+    user-select: none;
+    width: 100%;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 600px;
+      min-width: 600px;
+      height: 600px;
+      min-height: 600px;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 600px;
+
+      @include media-down(xl) {
+        width: 450px;
+        min-width: 450px;
+        height: 450px;
+        min-height: 450px;
+      }
+
+      @include media-down(lg) {
+        width: 400px;
+        min-width: 400px;
+        height: 400px;
+        min-height: 400px;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    &--orange {
+      z-index: 3;
+
+      &:after {
+        background-color: #EE7326;
+      }
+    }
+
+    &--gray {
+      z-index: 2;
+
+      &:after {
+        background-color: #E2E2E2;
+      }
+    }
+
+    &--white {
+      z-index: 1;
+
+      &:after {
+        background-color: #fff;
+      }
+
+      #{$root}__title {
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 100%;
+        color: #131313;
+        margin-bottom: 34px;
+
+        @include media-down(xl) {
+          font-size: 67px;
+          line-height: 131%;
+        }
+      }
+    }
+
+    &:hover, &:active, &:focus {
+      z-index: 9;
+
+      #{$root}__title {
+        color: #fff;
+      }
+
+      #{$root}__text {
+        color: #fff;
+      }
+
+      #{$root}__img {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
