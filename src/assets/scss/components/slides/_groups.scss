@@ -15,13 +15,9 @@
     align-items: center;
     justify-content: space-between;
     height: 100%;
-
-    @include media-down(xl) {
-      transform: scale(0.8);
-    }
+    padding: 0 50px;
 
     @include media-down(lg) {
-      transform: none;
       min-height: 664px;
     }
 

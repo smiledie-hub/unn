@@ -9,14 +9,12 @@
     gap: 97px;
 
     @include media-down(xl) {
-      transform: scale(0.65);
       padding-top: 100px;
       gap: 45px;
     }
 
     @include media-down(lg) {
       padding-top: 0;
-      transform: scale(1);
       position: static;
     }
 
@@ -98,6 +96,10 @@
     font-size: 20px;
     line-height: 150%;
 
+    @include media-only(xl) {
+      display: none;
+    }
+
     @include media-down(md) {
       position: relative;
       top: 2px;
@@ -117,6 +119,10 @@
       margin-bottom: 22px;
     }
 
+    @include media-only(xl) {
+      margin-bottom: 10px;
+    }
+
     @include media-down(md) {
       font-size: 22px;
       margin-bottom: 11px;
@@ -131,7 +137,7 @@
 
     @include media-down(xl) {
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 156%;
     }
   }
@@ -145,7 +151,8 @@
     z-index: 0;
 
     @include media-down(xl) {
-      max-width: 489px;
+      top: 50%;
+      max-width: 509px;
     }
 
     @include media-down(lg) {
@@ -169,7 +176,7 @@
     color: #FFFFFF;
 
     @include media-down(xl) {
-      font-size: 44px;
+      font-size: 48px;
       line-height: 148%;
     }
 

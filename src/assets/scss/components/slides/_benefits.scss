@@ -12,14 +12,6 @@
     justify-content: center;
     height: 100%;
     padding-bottom: 66px;
-
-    @include media-down(xl){
-      transform: scale(0.8);
-    }
-
-    @include media-down(lg) {
-      transform: none
-    }
   }
 
   &__wrapper {
@@ -36,13 +28,8 @@
       grid-template-columns: 1fr;
     }
 
-    @include media-down(xl) {
+    @include media-only(xl) {
       padding-top: 100px;
-      transform: scale(0.8);
-    }
-
-    @include media-down(lg) {
-      transform: scale(1);
     }
   }
 

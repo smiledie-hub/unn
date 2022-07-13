@@ -10,6 +10,10 @@
     padding-top: 80px;
   }
 
+  @include media-down(xl) {
+    padding: 130px 0 30px 0;
+  }
+
   &__center {
     display: flex;
     align-items: center;
@@ -20,6 +24,10 @@
     @include media-down(lg) {
       display: block;
     }
+
+    @include media-down(xl) {
+      padding-top: 0;
+    }
   }
 
   &__wrapper {
@@ -27,17 +35,17 @@
     gap: 182px;
     margin-bottom: 60px;
 
-    @include media-down(xl) {
+    @include media-only(xl) {
       margin-bottom: 0;
       gap: 100px;
+
+      & > div {
+        width: 50%;
+      }
     }
 
     @include media-down(xl) {
-      transform: scale(0.65);
-    }
 
-    @include media-down(lg) {
-      transform: scale(1);
     }
 
     @include media-down(lg) {
@@ -68,11 +76,12 @@
   }
 
   &__directions {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
     margin-bottom: 60px;
     max-width: 820px;
+
+    @include media-down(xl) {
+      margin-bottom: 38px;
+    }
   }
 
   &__list {
@@ -88,6 +97,7 @@
 
     @include media-down(xl) {
       font-size: 18px;
+      gap: 15px;
       line-height: 139%;
     }
 
@@ -122,18 +132,7 @@
     padding: 0 273px 0 137px;
 
     @include media-down(xl) {
-      transform: scale(0.65);
-      position: relative;
-      top: -100px;
-    }
-
-    @include media-down(lg) {
-      transform: scale(1);
-      top: 0;
-    }
-
-    @include media-down(xl) {
-      padding: 0 100px;
+      padding: 0 133px 0 107px;
     }
 
     @include media-down(lg) {
@@ -155,6 +154,10 @@
     & > div {
       &:last-child {
         max-width: 547px;
+
+        @include media-down(xl) {
+          max-width: 488px;
+        }
       }
     }
   }

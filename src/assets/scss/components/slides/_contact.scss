@@ -28,14 +28,6 @@
   &__container {
     position: relative;
     z-index: 2;
-
-    @include media-down(xl){
-      transform: scale(0.8);
-    }
-
-    @include media-down(lg) {
-      transform: none
-    }
   }
 
   &__map {
@@ -64,7 +56,7 @@
     @include media-down(xl){
       font-size: 60px;
       margin-top: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 120px;
       line-height: 133%;
     }
 
@@ -79,7 +71,7 @@
     max-width: 520px;
 
     @include media-down(xl){
-      margin-bottom: 40px;
+      margin-bottom: 76px;
     }
   }
 
