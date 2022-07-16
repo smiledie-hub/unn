@@ -29,6 +29,11 @@
     line-height: 156%;
     letter-spacing: 0.02em;
     color: #EE7326;
+    transition: 300ms;
+
+    &:hover {
+      color: #000;
+    }
   }
 
   &__open {
@@ -125,6 +130,11 @@
       line-height: 156%;
       letter-spacing: 0.02em;
       color: #131313;
+      transition: 300ms;
+
+      &:hover {
+        color: #EE7326;
+      }
 
       @include media-down(lg){
         max-width: 209px;
@@ -148,6 +158,7 @@
     }
   }
 }
+
 .header-blackout {
   position: fixed;
   width: 100%;

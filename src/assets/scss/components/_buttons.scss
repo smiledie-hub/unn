@@ -5,12 +5,18 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 123%;
+  transition: 300ms;
 
-  &--primary{
+  &--primary {
     background-color: #131313;
     color: #fff;
 
-    @include media-down(xl){
+    &:hover {
+      background: #EE7326;
+      color: #000;
+    }
+
+    @include media-down(xl) {
       font-weight: 700;
       font-size: 22px;
       line-height: 145%;
@@ -20,20 +26,26 @@
       font-size: 20px;
     }
   }
-  &--orange{
+
+  &--orange {
     font-weight: 600;
     font-size: 22px;
     line-height: 136%;
     color: #EE7326;
     padding: 0;
-    @include media-down(xl){
+
+    &:hover {
+      color: #000;
+    }
+
+    @include media-down(xl) {
       font-size: 18px;
       line-height: 167%;
     }
     @include media-down(lg) {
       font-size: 16px;
     }
-    @include media-down(md){
+    @include media-down(md) {
       display: table;
       margin: 0 auto;
     }

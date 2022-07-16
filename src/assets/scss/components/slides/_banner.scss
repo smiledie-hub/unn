@@ -6,12 +6,12 @@
   background-repeat: no-repeat;
   color: #fff;
 
-  @include media-down(lg){
+  @include media-down(lg) {
     height: 720px;
     margin-top: 100px;
   }
 
-  @include media-down(md){
+  @include media-down(md) {
     height: 488px;
     margin-top: 65px;
   }
@@ -23,19 +23,19 @@
     font-size: 70px;
     line-height: 114%;
 
-    @include media-down(xl){
+    @include media-down(xl) {
       max-width: 735px;
       font-size: 48px;
       line-height: 119%;
       margin-bottom: 42px;
     }
 
-    @include media-down(lg){
+    @include media-down(lg) {
       font-size: 46px;
       margin-bottom: 60px;
     }
 
-    @include media-down(md){
+    @include media-down(md) {
       font-size: 30px;
       margin-bottom: 80px;
     }
@@ -54,20 +54,51 @@
     align-items: center;
     display: flex;
     margin-bottom: 120px;
+    transition: 300ms;
+    animation: translateToY 3s infinite linear;
 
-    @include media-down(xl){
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes translateToY {
+      0% {
+        transform: translateY(0);
+      }
+
+      25% {
+        transform: translateY(10px);
+      }
+
+      50% {
+        transform: translateY(0);
+      }
+
+      75% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @include media-down(xl) {
       margin-bottom: 60px;
     }
 
     img {
       max-width: 60px;
+      transition: 300ms;
 
-      @include media-down(xl){
+      @include media-down(xl) {
         max-width: 40px;
       }
     }
 
-    @include media-down(lg){
+    @include media-down(lg) {
       display: none;
     }
   }
