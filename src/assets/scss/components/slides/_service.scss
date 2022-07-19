@@ -48,15 +48,9 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding-bottom: 77px;
-
-    @include media-down(xl) {
-      margin-bottom: 40px;
-    }
 
     @include media-down(lg) {
       transform: scale(1);
-      margin-bottom: 0;
     }
   }
 
@@ -145,13 +139,12 @@
   &__img {
     max-width: 683px;
     position: absolute;
-    top: calc(50% - 70px);
+    top: 50%;
     transform: translateY(-50%);
     left: 30px;
     z-index: 0;
 
     @include media-down(xl) {
-      top: 50%;
       max-width: 509px;
     }
 
